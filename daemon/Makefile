@@ -9,4 +9,4 @@ $(PROG): $(OBJ_FILES)
 	$(CXX) -c $<
 
 clean:
-	$(RM) -f *.o $(PROG)
+	$(RM) *.o $(PROG)

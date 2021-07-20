@@ -20,5 +20,5 @@ daemon:
 	$(MAKE) -C daemon
 
 clean:
-	$(RM) -f *.o $(PROG)
+	$(RM) *.o $(PROG)
 	$(MAKE) -C daemon clean
