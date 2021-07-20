@@ -1,0 +1,35 @@
+#
+# Theme file for Alert
+# Graphics by Rense "Huge" Boomsma 2007
+#
+
+$base          = "huge/"
+
+$skin          = "Huge.png"
+
+$tea.sprite    = "hugeteasprite.png"
+$coffee.sprite = "hugecoffeesprite.png"
+$lunch.sprite  = "hugelunchsprite.png"
+
+$tea.posx      = 40
+$tea.posy      = 27
+$tea.width     = 220
+$tea.height    = 220
+
+$coffee.posx   = 272
+$coffee.posy   = 27
+$coffee.width  = 220
+$coffee.height = 220
+
+$lunch.posx    = 504
+$lunch.posy    = 27
+$lunch.width   = 220
+$lunch.height  = 220
+
+$text.font     = "*-courier-*-24*"
+$text.color    = #ffffaa
+
+$text.posx     = 65
+$text.posy     = 290
+$text.width    = 640
+$text.step     = 15

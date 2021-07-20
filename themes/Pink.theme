@@ -1,0 +1,26 @@
+#
+# Theme file for Alert
+# Graphics by Niels Bos 2007
+#
+
+$base          = "pink/"
+
+$skin          = "Pink.png"
+
+$tea.sprite    = "pinkteasprite.png"
+$tea.posx      = 9
+$tea.posy      = 61
+
+
+$coffee.sprite = "pinkcoffeesprite.png"
+$coffee.posx   = 83
+$coffee.posy   = 11
+
+$lunch.sprite  = "pinklunchsprite.png"
+$lunch.posx    = 136
+$lunch.posy    = 58
+
+$text.color    = #005804
+$text.posx     = 45
+$text.posy     = 157
+$text.width    = 160

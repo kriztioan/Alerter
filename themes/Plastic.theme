@@ -1,0 +1,12 @@
+#
+# Theme file for Alert
+# Graphics by Niels Bos 2007
+#
+
+$base          = "plastic/"
+
+$skin          = "plastic.png"
+
+$text.font     = "*-courier-*-r-*-14-*"
+
+$text.nchar    = 18

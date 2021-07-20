@@ -1,0 +1,31 @@
+#
+# Theme file for Alert
+# Graphics by Niels Bos 2007
+#
+
+$base          = "sci-fi/"
+
+$skin          = "Sci-Fi.png"
+
+$tea.sprite    = "sci-fiteasprite.png"
+$tea.width     = 93
+$tea.height    = 78
+$tea.posx      = 3
+$tea.posy      = 3
+
+$coffee.sprite = "sci-ficoffeesprite.png"
+$coffee.width  = 93
+$coffee.height = 78
+$coffee.posx   = 132
+$coffee.posy   = 3
+
+$lunch.sprite  = "sci-filunchsprite.png"
+$lunch.width   = 120
+$lunch.height  = 78
+$lunch.posx    = 55
+$lunch.posy    = 3
+
+$text.color    = #000000
+$text.posx     = 5
+$text.posy     = 91
+$text.width    = 220

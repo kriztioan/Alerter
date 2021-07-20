@@ -1,0 +1,35 @@
+#
+# Theme file for Alert
+# Graphics by Niels Bos 2007
+#
+
+$base          = "tiny/"
+
+$skin          = "Tiny.png"
+
+$tea.sprite    = "tinyteasprite.png"
+$coffee.sprite = "tinycoffeesprite.png"
+$lunch.sprite  = "tinylunchsprite.png"
+
+$tea.posx      = 4
+$tea.posy      = 3
+$tea.width     = 25
+$tea.height    = 25
+
+$coffee.posx   = 30
+$coffee.posy   = 3
+$coffee.width  = 25
+$coffee.height = 25
+
+$lunch.posx   = 56
+$lunch.posy   = 3
+$lunch.width  = 25
+$lunch.height = 25
+
+$text.font     = "*-r-*-6-*"
+$text.color    = #ffffff
+
+$text.posx     = 8
+$text.posy     = 30
+$text.width    = 70
+$text.step     = 6

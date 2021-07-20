@@ -1,0 +1,8 @@
+#
+# Theme file for Alert
+# Graphics by Niels Bos & Edo Loenen 2007
+#
+
+$base      = "bare/"
+
+$skin      = "Bare.png"

@@ -1,0 +1,10 @@
+#
+# Theme file for Alert
+# Graphics by Niels Bos 2007
+#
+
+$base      = "space/"
+
+$skin      = "Space.png"
+
+$text.color = #ff0000
