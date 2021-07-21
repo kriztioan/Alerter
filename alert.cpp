@@ -3063,7 +3063,7 @@ char *retrieveURL(const char *url, int &total_bytes_recv, short port) {
       fd_set fdset;
       FD_ZERO(&fdset);
       FD_SET(sockfd, &fdset);
-      if (select(sockfd + 1, NULL, &fdset, NULL, &timeout) < 0) {
+      if (select(sockfd + 1, NULL, &fdset, NULL, &timeout) <= 0) {
         if (fcntl(sockfd, F_SETFL, opt) < 0)
           return (NULL);
       }
