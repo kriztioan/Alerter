@@ -6,6 +6,8 @@
 
 `Alerter` will run on Linux and MacOS, where the former requires `OSS` support for sound, and the latter the [XQuartz](https://www.xquartz.org) X11  window manager installed.
 
+![Alerter in Action](Alerter.png "Alerter in Action")
+
 ## Usage
 
 The `Alerter` client program is compiled with:
