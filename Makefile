@@ -3,7 +3,7 @@ PLATFORM:=$(shell uname -s)
 CPP_FILES:=$(wildcard *.cpp) $(wildcard audio/$(PLATFORM)/*.cpp)
 OBJ_FILES:=$(patsubst %.cpp,%.o,$(CPP_FILES))
 CPPFLAGS:=-Wno-write-strings -I/opt/X11/include -Iaudio/$(PLATFORM)
-LIBS:=-l/opt/X11/lib -lXm -lpng -lXt -lXpm -lX11 -lXext
+LIBS:=-lXm -lpng -lXt -lXpm -lX11 -lXext
 FRAMEWORKS:=
 ifeq ($(PLATFORM),Darwin)
 	FRAMEWORKS+=-framework CoreAudio -framework AudioUnit
