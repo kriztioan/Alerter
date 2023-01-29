@@ -766,10 +766,11 @@ int main(int argc, char *argv[], char **envp) {
                     tfprintf(stderr, "gethostbyaddr : %s\n",
                              hstrerror(h_errno));
 
+                  size_t text_len = strlen(remote_host->h_name) + 40;
                   char *text = (char *)malloc(
-                      (strlen(remote_host->h_name) + 40) * sizeof(char));
+                       text_len * sizeof(char));
 
-                  sprintf(text, "(:::) connected to %s on port %i (:::)",
+                  snprintf(text, text_len, "(:::) connected to %s on port %i (:::)",
                           remote_host->h_name, ntohs(remote.sin_port));
 
                   messages = AddMessage(messages, text, 1);
@@ -884,7 +885,7 @@ int main(int argc, char *argv[], char **envp) {
             textlen += (4 * messagelen);
             text = (char *)realloc(text, textlen * sizeof(char));
           }
-          sprintf(text + offset, " %s ...", message->text);
+          snprintf(text + offset, messagelen, " %s ...", message->text);
 
           offset += messagelen;
 
@@ -1620,11 +1621,12 @@ int main(int argc, char *argv[], char **envp) {
 
                 xalerts[i].active = true;
 
+                size_t text_len = strlen(pckt_recv.msg) + strlen(pckt_recv.nick) + 16;
                 char *text = (char *)malloc(
-                    (strlen(pckt_recv.msg) + strlen(pckt_recv.nick) + 16) *
+                    text_len *
                     sizeof(char));
                 tm_struct = localtime(&(pckt_recv.timestamp));
-                sprintf(text, "%02d:%02d:%02d - %s @ %s", tm_struct->tm_hour,
+                snprintf(text, text_len, "%02d:%02d:%02d - %s @ %s", tm_struct->tm_hour,
                         tm_struct->tm_min, tm_struct->tm_sec, pckt_recv.msg,
                         pckt_recv.nick);
                 if (NULL != xalerts[i].message)
@@ -1668,12 +1670,13 @@ int main(int argc, char *argv[], char **envp) {
 
             static int len;
 
+            size_t text_len = strlen(pckt_recv.msg) + 29;
             char *text =
-                (char *)malloc((strlen(pckt_recv.msg) + 29) * sizeof(char));
+                (char *)malloc(text_len * sizeof(char));
 
             tm_struct = localtime(&(pckt_recv.timestamp));
 
-            sprintf(text, "%02d:%02d:%02d %-12s : %s\n", tm_struct->tm_hour,
+            snprintf(text, text_len, "%02d:%02d:%02d %-12s : %s\n", tm_struct->tm_hour,
                     tm_struct->tm_min, tm_struct->tm_sec, pckt_recv.nick,
                     pckt_recv.msg);
 
@@ -1716,11 +1719,11 @@ int main(int argc, char *argv[], char **envp) {
               if (!messageGUIinit)
                 XmTextSetString(clientstext, clients);
             } else {
+              size_t text_len = strlen(pckt_recv.nick) + strlen(pckt_recv.msg) + 11;
               text = (char *)realloc(
-                  text, (strlen(pckt_recv.nick) + strlen(pckt_recv.msg) + 11) *
-                            sizeof(char));
+                  text, text_len * sizeof(char));
 
-              sprintf(text, "%02d:%02d:%02d %s %s", tm_struct->tm_hour,
+              snprintf(text, text_len, "%02d:%02d:%02d %s %s", tm_struct->tm_hour,
                       tm_struct->tm_min, tm_struct->tm_sec, pckt_recv.nick,
                       pckt_recv.msg);
 
